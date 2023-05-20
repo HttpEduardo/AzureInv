@@ -28,4 +28,3 @@ Isso é mais útil se você alterar seu modelo de contrato. Por exemplo, de EA o
 |--|--|--|
 | `-SubscriptionId` | vazio | Um ID de assinatura de seu ambiente. O script carregará apenas recursos desta assinatura.|
 | `-Verbose` | | Defina este parâmetro para obter mais informações durante a execução do script |
-# AzureInv
