@@ -1,31 +1,31 @@
-# Get an inventory of your Azure environment
+# Obtenha um inventário do seu ambiente Azure
 
-The script exports your Azure inventory as CSV files. It builds different CSV files for each subscription with resources.
+O script exporta seu inventário do Azure como arquivos CSV. Ele cria diferentes arquivos CSV para cada assinatura com recursos.
 
-This is most useful if you change your contract model. For example from EA or Pay-As-You-Go to a CSP contract. Some of the marketplace resources aren't available yet in CSP. You can send your CSP provider this files to give them an overview about your Azure environment.
+Isso é mais útil se você alterar seu modelo de contrato. Por exemplo, de EA ou Pay-As-You-Go para um contrato CSP. Alguns dos recursos do mercado ainda não estão disponíveis no CSP. Você pode enviar esses arquivos ao seu provedor CSP para fornecer uma visão geral sobre seu ambiente do Azure.
 
-# Prerequisites
+# Pré-requisitos
 
-1. PowerShell >= 5.1 or PowerShell Core 6.x   
-2. Azure PowerShell Az Module \
-   You can download this module at: https://github.com/Azure/azure-powershell/releases/latest \
-   or install it directly with `Install-Module -Name Az`
-3. At least "Reader" rights on your desired subscriptions
+1. PowerShell >= 5.1 ou PowerShell Core 6.x
+2. Módulo Azure PowerShell Az \
+    Você pode baixar este módulo em: https://github.com/Azure/azure-powershell/releases/latest \
+    ou instale-o diretamente com `Install-Module -Name Az`
+3. Pelo menos direitos de "leitor" nas assinaturas desejadas
 
-# Usage
+# Uso
 
-1. Download or clone this repo
-2. Open up a PowerShell (non-elevated is fine)
-3. (optional) Connect to your Azure environment by running `Connect-AzAccount`
-4. Run `.\Get-AzureInventory.ps1`. If you're not connected now, it will connect you now.
-5. As a result you'll get different CSV files:
-   - "subscriptions.csv" with information about all scanned subscriptions.
-   - "inventory_<subscription_id>.csv" with all resource information (Name, Resource Group, Type, SKU)
-   - "marketplace_<subscription_id>.csv" with all marketplace resources
+1. Baixe ou clone este repositório
+2. Abra um PowerShell (não elevado é bom)
+3. (opcional) Conecte-se ao seu ambiente Azure executando `Connect-AzAccount`
+4. Execute `.\Get-AzureInventory.ps1`. Se você não estiver conectado agora, ele irá conectá-lo agora.
+5. Como resultado, você obterá diferentes arquivos CSV:
+    - "subscriptions.csv" com informações sobre todas as assinaturas verificadas.
+    - "inventory_<subscription_id>.csv" com todas as informações do recurso (nome, grupo de recursos, tipo, SKU)
+    - "marketplace_<subscription_id>.csv" com todos os recursos do marketplace
 
-# Parameters
-|Parameter|Default|Possible Value|
+# Parâmetros
+|Parâmetro|Padrão|Valor Possível|
 |--|--|--|
-| `-SubscriptionId` | empty | A subscription ID from your environment. The script will only load resources from this subscription.|
-| `-Verbose` |  | Set this parameter to get more information while the script is running |
+| `-SubscriptionId` | vazio | Um ID de assinatura de seu ambiente. O script carregará apenas recursos desta assinatura.|
+| `-Verbose` | | Defina este parâmetro para obter mais informações durante a execução do script |
 # AzureInv
